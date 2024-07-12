@@ -61,7 +61,6 @@ const Room = ({ leftDoor, rightDoor, topDoor, bottomDoor, handleDoorClick, movem
     };
 
     useEffect(() => {
-        console.log(movement)
         setTimeout(() => {
             switch (movement) {
                 case 'toTop':
@@ -86,9 +85,6 @@ const Room = ({ leftDoor, rightDoor, topDoor, bottomDoor, handleDoorClick, movem
 
     }, [movement]); 
 
-    useEffect(() => {
-        console.log(playerDirection)
-    },[playerDirection])
 
 
 
