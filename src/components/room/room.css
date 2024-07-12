@@ -1,0 +1,171 @@
+.room {
+    position: relative;
+    width: 20vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.room-part {
+    height: 20px;
+    display: flex;
+}
+
+.room-top,
+.room-bottom {
+    padding: 0px 20px;
+}
+
+.room-bottom {}
+
+.room-top {}
+
+.room-middle {
+    flex: 1;
+    display: flex;
+}
+
+.room-cell {
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: repeating-linear-gradient(45deg, #575757 25%, transparent 25%, transparent 75%, #575757 75%, #575757), repeating-linear-gradient(45deg, #575757 25%, #e5e5f7 25%, #e5e5f7 75%, #575757 75%, #575757);
+    background-position: 0 0, 40px 40px;
+    background-size: 80px 80px;
+    flex: 1;
+    position: relative;
+}
+.finish-cell{
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: repeating-linear-gradient(45deg, #30aa00 25%, transparent 25%, transparent 75%, #30aa00 75%, #30aa00), repeating-linear-gradient(45deg, #30aa00 25%, #e5e5f7 25%, #e5e5f7 75%, #30aa00 75%, #30aa00);
+    background-position: 0 0, 40px 40px;
+    background-size: 80px 80px;
+    flex: 1;
+    position: relative;
+}
+
+.door-way {
+    background: #333;
+}
+
+.door-way-top,
+.door-way-bottom,
+.door-way-left,
+.door-way-right {
+    display: flex;
+    cursor: pointer;
+}
+
+.door-way-top,
+.door-way-bottom {
+    flex: 1;
+    flex-direction: row;
+}
+
+.door-way-left,
+.door-way-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.door-way-top:hover .door-gate-top-left {
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+
+}
+
+.door-way-top:hover .door-gate-top-right {
+    transform: rotate(90deg);
+    transform-origin: bottom right;
+}
+
+.door-way-bottom:hover .door-gate-bottom-left {
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.door-way-bottom:hover .door-gate-bottom-right {
+    transform: rotate(-90deg);
+    transform-origin: top right;
+}
+
+.door-way-left:hover .door-gate-left-top {
+    transform: rotate(90deg);
+    transform-origin: top right;
+}
+
+.door-way-left:hover .door-gate-left-bottom {
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+}
+
+.door-way-right:hover .door-gate-right-top {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+}
+
+.door-way-right:hover .door-gate-right-bottom {
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+}
+
+.door-gate {
+    transition: .5s ease;
+}
+
+.door-way-left {
+    width: 20px;
+}
+
+.door-way-right {
+    width: 20px;
+}
+
+.door-gate {
+    background-color: darkgoldenrod;
+    flex: 1;
+}
+
+.door-gate-top-left,
+.door-gate-top-right {
+    flex: 1;
+
+
+}
+
+
+.player {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    border-radius: 100%;
+    transition: .5s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.rotate-top {
+    transform: rotate(0deg);
+}
+
+.rotate-right {
+    transform: rotate(90deg);
+}
+
+.rotate-bottom {
+    transform: rotate(180deg);
+}
+
+.rotate-left {
+    transform: rotate(-90deg);
+}
