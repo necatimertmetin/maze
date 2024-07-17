@@ -132,7 +132,14 @@ const GamePage = () => {
 
     return (
         <div className='gamepage'>
-            <div className='maze-level-label'>Level {currentMazeIndex + 1}</div>
+            <div className='maze-level-container'>
+                <div className='maze-level-label'>
+                Level {currentMazeIndex + 1}
+                </div>
+                <div className='maze-level-label small-label'>
+                Maze Size {currentMazeIndex + 2} x {currentMazeIndex + 2}
+                </div>
+          </div>
             <div className='room-container'>
                 
                 <Room
