@@ -132,7 +132,9 @@ const GamePage = () => {
 
     return (
         <div className='gamepage'>
+            <div className='maze-level-label'>Level {currentMazeIndex + 1}</div>
             <div className='room-container'>
+                
                 <Room
                     key={roomKey} // Key'i dinamik olarak değiştir
                     leftDoor={currentCol > 0 && mazes[currentMazeIndex].maze[currentRow][currentCol - 1] !== 'X'}

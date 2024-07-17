@@ -12,3 +12,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.maze-level-label{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 32px;
+}
