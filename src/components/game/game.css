@@ -1,31 +1,178 @@
-.gamepage{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #121212;
+.gamepage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #121212;
 }
-.room-container{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.room-container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.maze-level-container{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%);
-    color: #fff;
-    font-weight: 600;
-    font-size: 32px;
+.maze-level-container {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.small-label {
+  font-size: 28px;
+}
+.create-your-own-maze-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  margin: 10px;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background-color: #21272a;
+  cursor: pointer;
+  user-select: none;
+}
+.create-your-own-maze-button:hover {
+  background-color: #383b3d;
+}
+.create-your-own-maze-button:active {
+  background-color: #242627;
+}
+
+.maze-creator-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #333;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.maze-creator-wrapper {
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+}
+.maze-creator-input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.maze-creator-label{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
 }
-.small-label{
-    font-size: 28px;
+.maze-creator-matrix{
+    display: flex;
+    flex: 1;
+}
+.maze-creator-matrix-container {
+  flex: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 200px;
+
+}
+.maze-creator-row{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.maze-creator-cell{
+    flex: 1;
+    border: 1px solid #222;
+    background-color: #000;
+    cursor: pointer;
+ 
+}
+.maze-creator-row .start-cell{
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: #fff;
+  cursor: default !important;
+  
+}
+.maze-creator-row .start-cell p{
+  transform: rotate(-45deg);
+  
+}
+
+.maze-creator-row  .end-cell {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image:  repeating-linear-gradient(45deg, #30aa00 25%, transparent 25%, transparent 75%, #30aa00 75%, #30aa00), repeating-linear-gradient(45deg, #30aa00 25%, #e5e5f7 25%, #e5e5f7 75%, #30aa00 75%, #30aa00);
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  cursor: default !important;
+}
+
+
+.maze-creator-input {
+  width: 50px;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.maze-creator-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+
+.maze-creator-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.maze-creator-button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+  min-width: 100px;
+}
+
+.maze-creator-button:hover,
+:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
 }
