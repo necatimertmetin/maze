@@ -267,10 +267,10 @@ const GamePage = () => {
             )}
           </div>
           <div className="maze-creator-button-container">
-            <div className="maze-creator-button" onClick={() => {handleSaveMatrix()}}>
+            <div className="maze-creator-button" onClick={() => {handleSaveMatrix(); setMazeCreatorVisible(!mazeCreatorVisible); window.location.reload();}}>
               Save
             </div>
-            <div className="maze-creator-button" onClick={() => {setMazeCreatorVisible(!mazeCreatorVisible)}}>Cancel</div>
+            <div className="maze-creator-button" onClick={() => {setMazeCreatorVisible(!mazeCreatorVisible); window.location.reload();}}>Cancel</div>
           </div>
         </div>
       )}
